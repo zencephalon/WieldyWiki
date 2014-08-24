@@ -1,3 +1,4 @@
 class Link < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :link_in, polymorphic: true
+  belongs_to :link_out, polymorphic: true
 end

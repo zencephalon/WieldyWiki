@@ -1,3 +1,6 @@
 class Branch < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :tree
+
+  has_many :links_in, as: :link_in
+  has_many :links_out, as: :link_out
 end
