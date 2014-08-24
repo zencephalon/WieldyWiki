@@ -3,4 +3,5 @@ class Tree < ActiveRecord::Base
   has_many :links_in, as: :link_in
   has_many :branches
   has_one :branch
+  belongs_to :author
 end
