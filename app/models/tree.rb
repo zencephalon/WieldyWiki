@@ -1,3 +1,3 @@
-class Wiki < ActiveRecord::Base
+class Tree < ActiveRecord::Base
   # Remember to create a migration!
 end
