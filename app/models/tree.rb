@@ -7,4 +7,8 @@ class Tree < ActiveRecord::Base
 
   has_many :children, class_name: :Tree, foreign_key: :parent_id
   belongs_to :parent, class_name: :Tree
+
+  def content
+    branches.first.content
+  end
 end
