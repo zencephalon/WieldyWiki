@@ -14,10 +14,17 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+
 
   <title></title>
 </head>
+    <div id="content">
+      <header>
+        <a href="/index"><img src="/zenchinese.png" class="logo"/></a>
+      </header>
+      <%= yield %>
+    </div>
 <body>
-  <%= yield %>
 </body>
 </html>
