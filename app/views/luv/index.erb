@@ -1,0 +1,11 @@
+<form name="luv">
+<input name="luv[title]" type="text" placeholder="Title">
+<textarea name="luv[content]" placeholder="Some loving content."></textarea>
+<input type="submit" value="Send us the luv!">
+</form>
+
+<div id="luv-list">
+<% @luvs.each do |luv| %>
+  <%= erb :'luv/single', locals: {luv: luv} %>
+<% end %>
+</div>
