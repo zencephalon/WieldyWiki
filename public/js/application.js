@@ -4,4 +4,14 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $("form[name=luv]").submit(function() {
+    console.log($(this).serialize());
+    $.post('/luv', 
+      $(this).serialize(),
+      function(data) {
+        $('#luv-list').append(data);
+      }
+    );
+    return false;
+  });
 });
