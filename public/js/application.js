@@ -9,9 +9,10 @@ $(document).ready(function() {
     $.post('/luv', 
       $(this).serialize(),
       function(data) {
-        $('#luv-list').append(data);
+        $('#luv-list').prepend(data);
       }
     );
+    $(this)[0].reset();
     return false;
   });
 });
