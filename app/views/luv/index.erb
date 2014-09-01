@@ -5,7 +5,7 @@
 </form>
 
 <div id="luv-list">
-<% @luvs.each do |luv| %>
+<% @luvs.reverse.each do |luv| %>
   <%= erb :'luv/single', locals: {luv: luv} %>
 <% end %>
 </div>
