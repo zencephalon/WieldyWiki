@@ -3,6 +3,8 @@ ruby '2.0.0'
 
 gem 'bcrypt'
 
+gem 'dotenv'
+
 # PostgreSQL driver
 gem 'pg'
 
