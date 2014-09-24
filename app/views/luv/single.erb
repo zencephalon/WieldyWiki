@@ -1,4 +1,8 @@
-<div class="luv">
-<h4><%= luv.title %></h4>
-<p><%= luv.content %></p>
+<div class="luv" data-luv-id="<%= luv.id %>">
+  <h4><%= luv.title %></h4>
+  <p><%= luv.content %></p>
+  <form action="/luv/<%= luv.id %>" method="POST">
+    <input name="_method" value="DELETE">
+    <input type="submit" value="Delete me">
+  </form>
 </div>
