@@ -27,7 +27,10 @@ post '/luv' do
 end
 
 delete '/luv/:id' do
-  @luv.destroy
-
-  redirect to("/")
+  if rand(6) > 2
+    @luv.destroy
+    redirect to("/")
+  else
+    500
+  end
 end
