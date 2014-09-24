@@ -12,8 +12,6 @@ before '/luv/:id' do
 end
 
 get '/luv/:id' do
-  #@luv = Luv.find(params[:id])
-
   if params[:ajax]
     @luv.to_json
   else
@@ -29,4 +27,7 @@ post '/luv' do
 end
 
 delete '/luv/:id' do
+  @luv.destroy
+
+  redirect to("/")
 end
