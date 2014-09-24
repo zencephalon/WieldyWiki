@@ -4,7 +4,20 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-  $("form[name=luv]").submit(function() {
+
+  $("input[name=luvbtn]").click(function() {
+    console.log("hello")
+    $.ajax({
+      url: '/luv/' + $("input[name=luv_id]").val(),
+      data: {ajax: true},
+      dataType: "json"
+    }).done(function(response) {
+      $('#luv-list').prepend('<h2>' + response['title'] + '</h2>')
+    })
+  })
+
+  $("form[name=luv]").submit(function(event) {
+    event.preventDefault();
     console.log($(this).serialize());
     $.post('/luv', 
       $(this).serialize(),
@@ -13,6 +26,5 @@ $(document).ready(function() {
       }
     );
     $(this)[0].reset();
-    return false;
   });
 });

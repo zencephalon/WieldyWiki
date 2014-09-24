@@ -4,8 +4,11 @@
 <input type="submit" value="Send us the luv!">
 </form>
 
+<input type="text" name="luv_id">
+<input type="button" name="luvbtn" value="fetch luv">
+
 <div id="luv-list">
-<% @luvs.reverse.each do |luv| %>
-  <%= erb :'luv/single', locals: {luv: luv} %>
+<% @luvs.reverse.each do |loop_luv| %>
+  <%= erb :'luv/single', {locals: {luv: loop_luv, tags: "yolo, hello, goodbye"}} %>
 <% end %>
 </div>
